@@ -2,7 +2,7 @@ import os
 
 def quit(var):
     if var.lower() == 'q':
-        print('\nBye!')
+        print('Bye!\n')
         exit()
 
 def wd(work_dir):
@@ -22,43 +22,54 @@ def wd(work_dir):
             print('Current working directory:', os.getcwd())
             return True
 
-def extensions():
-    with open(f"{os.path.abspath('file_formats.txt')}", 'r') as f:
-        extensions = f.read().split(',')
-        return extensions
-
-def touch(file_name):
-    exists = os.path.exists(file_name)
-    extension = extensions()
+extensions = ['py', 'txt', 'docx', 'doc', 'c', 'cpp', 'cs']
 
 wd(input(f'>Enter the working directory (leave empty for choose this folder: {os.getcwd()}): '))
 
 name = ''
 while name != 'done' or name != '':
-    name = input('\nEnter the file name (leave empty to quit): ')
-    if name == 'q':
+    file = False
+    folder = False
+    
+    name = input('\nEnter the name (leave empty to quit): ')
+    if name == 'q' or name == 'done': 
+        name = 'q'
         quit(name)
-    if name == 'done' or name == '':
-        break
     if name == '':
         break
-    if os.path.exists(name):
-        print('\nFile already exists!')
-        continue
+    if name.find('.') != -1:
+        names = name.split('.')
+        for ext in extensions:
+            if names[1] == ext:
+                file = True
+                folder = False
+                break
+            else:
+                file = False
+                folder = True
+        if not file:
+            print('\nFile extension not supported! create an issue if you think your extension must be added!')
     else:
-        print('\nFile does not exist!')
-        extension = input('\nEnter the file extension (leave empty to quit): ')
-        if extension == 'q':
-            quit(extension)
-        if extension == 'done':
-            break
-        if extension == '':
+        file = False
+        folder = True
+    if file:
+        if os.path.exists(name):
+            print('\nFile already exists!')
             continue
-        if extension in extension:
-            print('\nFile extension is valid!')
+        else:
+            print('\nFile does not exist!')
             with open(name, 'w') as f:
                 f.write('')
-            print('\nFile created!')
-        else:
-            print('\nFile extension is not valid!')
+                print('\nFile created!')
+    elif folder:
+        if os.path.exists(name):
+            print('\nDirectory already exists!')
             continue
+        else:
+            print('\nDirectory does not exist!')
+            print('\nCreating the directory...')
+            os.mkdir(name)
+            os.chdir(name)
+    else:
+        print('\nError!')
+        break
