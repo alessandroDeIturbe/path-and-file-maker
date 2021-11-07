@@ -6,6 +6,7 @@ def quit(var):
         exit()
 
 def wd(work_dir):
+    quit(work_dir)
     if work_dir == '':
         work_dir = os.getcwd()
         os.chdir(work_dir)
