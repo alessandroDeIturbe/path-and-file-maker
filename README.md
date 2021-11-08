@@ -18,27 +18,11 @@
 
 ### 🏠 [Homepage](https://github.com/alessandroDeIturbe/path-and-file-maker)
 
-## Prerequisites
-
-- npm >=5.5.0
-- node >=9.3.0
 
 ## Install
 
 ```sh
-python3 main.py
-```
-
-## Usage
-
-```sh
- 
-```
-
-## Run tests
-
-```sh
- 
+./main
 ```
 
 ## Author
@@ -49,7 +33,7 @@ python3 main.py
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/alessandroDeIturbe/path-and-file-maker/issues). You can also take a look at the [contributing guide](https://github.com/kefranabg/readme-md-generator/blob/master/CONTRIBUTING.md).
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/alessandroDeIturbe/path-and-file-maker/issues). 
 
 ## Show your support
 
@@ -59,6 +43,3 @@ Give a ⭐️ if this project helped you!
 
 Copyright © 2021 [Alessandro De Iturbe](https://github.com/alessandroDeIturbe).<br />
 This project is [MIT](https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
