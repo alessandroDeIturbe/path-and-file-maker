@@ -10,7 +10,6 @@ def wd(work_dir):
     if work_dir == '':
         work_dir = os.getcwd()
         os.chdir(work_dir)
-        print('\nWorking directory: ' + os.getcwd())
     else:
         while os.path.exists(work_dir) == False:
             print('\nDirectory does not exist!')
@@ -20,12 +19,12 @@ def wd(work_dir):
         if os.path.exists(work_dir):
             print('Exists:', os.path.exists(work_dir))
             os.chdir(work_dir)
-            print('Current working directory:', os.getcwd())
             return True
 
 extensions = ['py', 'txt', 'docx', 'doc', 'c', 'cpp', 'cs']
 
 wd(input(f'>Enter the working directory (leave empty for choose this folder: {os.getcwd()}): '))
+print('\nCurrent working directory:', os.getcwd())
 
 name = ''
 while name != 'done' or name != '':
