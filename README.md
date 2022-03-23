@@ -16,7 +16,7 @@
 ## Usage
 
 ```sh
-python3 path-maker.py &#34;PATH&#34;
+python3 path-maker.py "PATH";
 ```
 
 ## Author
