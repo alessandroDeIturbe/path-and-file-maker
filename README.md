@@ -1,37 +1,34 @@
-<h1 align="center">Welcome to Path and File Generator 👋</h1>
+<h1 align="center">Welcome to path-maker 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
-  <a href="https://github.com/alessandroDeIturbe/path-and-file-maker/wiki" target="_blank">
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/alessandroDeIturbe/path-maker/wiki" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
-  <a href="https://github.com/kefranabg/readme-md-generator/graphs/commit-activity" target="_blank">
-    <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
-  </a>
-  <a href="https://github.com/kefranabg/readme-md-generator/blob/master/LICENSE" target="_blank">
-    <img alt="License: MIT" src="https://img.shields.io/github/license/alessandroDeIturbe/path-and-file-maker" />
+  <a href="https://github.com/alessandroDeIturbe/path-maker/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
   </a>
 </p>
 
-> A simple program for create file and folders in sequence faster
+> This is a command for making files and directories faster
 
-### 🏠 [Homepage](https://github.com/alessandroDeIturbe/path-and-file-maker)
+### 🏠 [Homepage](https://github.com/alessandroDeIturbe/path-maker)
 
-
-## Install
+## Usage
 
 ```sh
-./main
+python3 path-maker.py &#34;PATH&#34;
 ```
 
 ## Author
 
 👤 **Alessandro De Iturbe**
 
+* Website: Alessandro De Iturbe
 * Github: [@alessandroDeIturbe](https://github.com/alessandroDeIturbe)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/alessandroDeIturbe/path-and-file-maker/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/alessandroDeIturbe/path-maker/issues). 
 
 ## Show your support
 
@@ -39,5 +36,6 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2021 [Alessandro De Iturbe](https://github.com/alessandroDeIturbe).<br />
-This project is [MIT](https://github.com/alessandroDeIturbe/path-and-file-maker/blob/main/LICENSE) licensed.
+Copyright © 2022 [Alessandro De Iturbe](https://github.com/alessandroDeIturbe).<br />
+This project is [MIT](https://github.com/alessandroDeIturbe/path-maker/blob/main/LICENSE) licensed.
+
