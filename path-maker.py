@@ -5,21 +5,20 @@ from colorama import Fore, Back, Style
 def error(message):
     return f'{Back.RED}{Fore.WHITE}{message}{Style.RESET_ALL}'
 
+def detect_file(file):
+    if '.' in file:
+        return True
+    else:
+        return False
+
 argvs = sys.argv
 argvs.pop(0)
 
-if len(argvs) == 0:
-    print(error('ERROR: No arguments'))
-    print('Insert the path of the folders/file you want to create (REMEMBER, THE ROOT DIRECTORY IS THE CURRENT DIRECTORY)')
-    print('Example: /folder1/folder2/folder3/file.txt')
-    sys.exit(1)
-if len(argvs) > 2:
-    print(error('ERROR: Too many arguments'))
-    print('Insert the path of the folders/file you want to create (REMEMBER, THE ROOT DIRECTORY IS THE CURRENT DIRECTORY)')
-    print('Example: /folder1/folder2/folder3/file.txt')
+if len(argvs) == 0 or len(argvs) > 2:
+    print(error('Usage: path-maker.py <path> <start-directory(OPTIONAL)>'))
+    print('Use "path-maker.py --help" for more information.')
     sys.exit(1)
 if argvs[0] == '-h' or argvs[0] == '--help':
-
     print('USAGE: path-maker.py [path] [start-folder (if you want to start from a specific folder)]')
     print('Example One: path-maker.py /folder1/folder2/folder3/file.txt\nExample Two: path-maker.py /folder1/folder2/folder3/file.txt /folder1/folder2/folder3\n')
     sys.exit(0)
@@ -28,20 +27,25 @@ path = argvs[0].split('/')
 if len(argvs) == 2:
     if os.path.exists(argvs[1]):
         start_folder = argvs[1]
+        os.chdir(start_folder)
         print(f"Start folder: {start_folder}")
     else:
         print('error: start folder does not exist')
         sys.exit(1)
 else:
     start_folder = os.getcwd()
+    os.chdir(start_folder)
     print(f"start_folder: {start_folder}")
 
 if len(path) == 1:
-    if '.' in path[0]:
-       with open(path[0], 'w') as f:
-           f.write('')
+    if not os.path.exists(path[0]):
+        if detect_file(path[0]):
+            with open(path[0], 'w') as f:
+                f.write('')
+        else:
+            os.mkdir(path[0])
     else:
-        os.mkdir(path[0])
+        print(f'"{path[0]}" already exists')
 else:
     for i in range(len(path) - 1):
         if os.path.exists(path[i]):
