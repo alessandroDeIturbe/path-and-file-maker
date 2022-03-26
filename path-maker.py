@@ -15,12 +15,16 @@ argvs = sys.argv
 argvs.pop(0)
 
 if len(argvs) == 0 or len(argvs) > 2:
+    if len(argvs) == 0:
+        print(error('ERROR: No arguments given.'))
+    else:
+        print(error('ERROR: Too many arguments given.'))
     print(error('Usage: path-maker.py <path> <start-directory(OPTIONAL)>'))
-    print('Use "path-maker.py --help" for more information.')
+    print('Use "python3 path-maker.py --help" for more information.')
     sys.exit(1)
 if argvs[0] == '-h' or argvs[0] == '--help':
-    print('USAGE: path-maker.py [path] [start-folder (if you want to start from a specific folder)]')
-    print('Example One: path-maker.py /folder1/folder2/folder3/file.txt\nExample Two: path-maker.py /folder1/folder2/folder3/file.txt /folder1/folder2/folder3\n')
+    print('USAGE: python3 path-maker.py [path] [start-folder (if you want to start from a specific folder)]')
+    print('Example One: python3 path-maker.py /folder1/folder2/folder3/file.txt\nExample Two: python3 path-maker.py /folder1/folder2/folder3/file.txt /folder1/folder2/folder3\n')
     sys.exit(0)
 
 path = argvs[0].split('/')
