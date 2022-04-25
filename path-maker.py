@@ -61,5 +61,12 @@ else:
             os.chdir(path[i])
 
     print(f'Creating {path[-1]}...')
-    with open(path[-1], 'w') as f:
-        f.write('')
+
+    if detect_file(path[-1]):
+        print(f'{path[-1]} is a file')
+        with open(path[-1], 'w') as f:
+            f.write('')
+    else:
+        print(f'{path[-1]} is a folder')
+        os.mkdir(path[-1])
+
