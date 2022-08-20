@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to path-maker 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.1-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/alessandroDeIturbe/path-maker/wiki" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -9,21 +9,33 @@
   </a>
 </p>
 
-> This is a command for making files and directories faster
+> A simple tool for creating folders and files quicker
 
-### 🏠 [Homepage](https://github.com/alessandroDeIturbe/path-maker)
+### 🏠 [Homepage](https://www.github.com/alessandroDeIturbe/path-maker)
+
+## Install
+
+```sh
+chmod +x install.sh
+./install.sh
+```
 
 ## Usage
 
 ```sh
-python3 path-maker.py "PATH";
+pfm <path> <start-directory(OPTIONAL)>
+```
+
+## Run tests
+
+```sh
+pfm
 ```
 
 ## Author
 
 👤 **Alessandro De Iturbe**
 
-* Website: Alessandro De Iturbe
 * Github: [@alessandroDeIturbe](https://github.com/alessandroDeIturbe)
 
 ## 🤝 Contributing
@@ -39,3 +51,5 @@ Give a ⭐️ if this project helped you!
 Copyright © 2022 [Alessandro De Iturbe](https://github.com/alessandroDeIturbe).<br />
 This project is [MIT](https://github.com/alessandroDeIturbe/path-maker/blob/main/LICENSE) licensed.
 
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
