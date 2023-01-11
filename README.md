@@ -16,6 +16,7 @@
 ## Install
 
 ```sh
+sudo chmod +x install.sh
 ./install.sh
 ```
 
@@ -35,11 +36,11 @@ pfm
 
 👤 **Alessandro De Iturbe**
 
-* Github: [@alessandroDeIturbe](https://github.com/alessandroDeIturbe)
+- Github: [@alessandroDeIturbe](https://github.com/alessandroDeIturbe)
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/alessandroDeIturbe/path-maker/issues). 
+Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/alessandroDeIturbe/path-maker/issues).
 
 ## Show your support
 
