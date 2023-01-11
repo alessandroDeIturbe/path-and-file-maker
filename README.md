@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to path-maker 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/alessandroDeIturbe/path-maker/wiki" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
@@ -11,12 +11,11 @@
 
 > A simple tool for creating folders and files quicker
 
-### 🏠 [Homepage](https://www.github.com/alessandroDeIturbe/path-maker)
+### 🏠 [Homepage](https://github.com/alessandroDeIturbe/path-maker)
 
 ## Install
 
 ```sh
-chmod +x install.sh
 ./install.sh
 ```
 
@@ -48,8 +47,5 @@ Give a ⭐️ if this project helped you!
 
 ## 📝 License
 
-Copyright © 2022 [Alessandro De Iturbe](https://github.com/alessandroDeIturbe).<br />
+Copyright © 2023 [Alessandro De Iturbe](https://github.com/alessandroDeIturbe).<br />
 This project is [MIT](https://github.com/alessandroDeIturbe/path-maker/blob/main/LICENSE) licensed.
-
-***
-_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
