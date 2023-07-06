@@ -6,48 +6,61 @@ from colorama import Fore, Back, Style
 
 
 def error(message):
-    # Format an error message with red background and white text.
+    # Formatta un messaggio di errore con sfondo rosso e testo bianco.
     return f'{Back.RED}{Fore.WHITE}{message}{Style.RESET_ALL}'
 
 
 def message(message):
-    # Format a message with blue background and white text.
+    # Formatta un messaggio con sfondo blu e testo bianco.
     return f'{Back.BLUE}{Fore.WHITE}{message}{Style.RESET_ALL}'
 
 
 def create_file(path):
-    # Create a file at the specified path.
+    # Crea un file nel percorso specificato.
     try:
         with open(path, 'w') as f:
             f.write('')
-        print(f'File "{path}" created successfully.')
+        print(f'File "{path}" creato con successo.')
     except Exception as e:
-        print(error(f'Error creating file "{path}": {str(e)}'))
+        print(error(f'Errore durante la creazione del file "{path}": {str(e)}'))
 
 
 def create_directory(path):
-    # Create a directory at the specified path.
+    # Crea una cartella nel percorso specificato.
     try:
         os.makedirs(path, exist_ok=True)
+<<<<<<< HEAD
         print(f'Directory "{path}" created successfully.')
+=======
+        print(f'Cartella "{path}" creata con successo.')
+>>>>>>> d40a689 (fixed bugs)
     except Exception as e:
-        print(error(f'Error creating directory "{path}": {str(e)}'))
+        print(error(f'Errore durante la creazione della cartella "{path}": {str(e)}'))
 
 
 def parse_arguments():
-    # Parse command line arguments.
+    # Analizza gli argomenti della riga di comando.
     parser = argparse.ArgumentParser(
+<<<<<<< HEAD
         description='Create files or directories.')
     parser.add_argument('paths', nargs='+', help='Paths of the files or directories to create')
+=======
+        description='Crea file o cartelle.')
+    parser.add_argument('paths', help='Percorsi dei file o delle cartelle da creare')
+>>>>>>> d40a689 (fixed bugs)
     parser.add_argument('--start-folder', '-s',
-                        help='Starting folder path (optional)')
+                        help='Percorso della cartella di partenza (opzionale)')
     return parser.parse_args()
 
 
 def main():
-    # Main function to handle the creation of files or directories.
+    # Funzione principale per gestire la creazione di file o cartelle.
     args = parse_arguments()
+<<<<<<< HEAD
     paths = args.paths
+=======
+    paths = args.paths.split(',')
+>>>>>>> d40a689 (fixed bugs)
     start_folder = args.start_folder
 
     if start_folder:
@@ -55,15 +68,25 @@ def main():
             os.chdir(start_folder)
         except Exception as e:
             print(
-                error(f'Error changing directory to "{start_folder}": {str(e)}'))
-            if input('Continue in the current folder? y/[N]').lower() != 'y':
+                error(f'Errore durante il cambio della directory a "{start_folder}": {str(e)}'))
+            if input('Continuare nella cartella corrente? y/[N]').lower() != 'y':
                 return
 
     for path in paths:
+<<<<<<< HEAD
         base_dir = os.path.dirname(path)
         if base_dir:
             os.makedirs(base_dir, exist_ok=True)
         if os.path.isfile(path):
+=======
+        if '/' in path:
+            segments = path.split('/')
+            for segment in segments[:-1]:
+                create_directory(segment)
+                os.chdir(segment)
+            create_file(segments[-1])
+        else:
+>>>>>>> d40a689 (fixed bugs)
             create_file(path)
         else:
             create_directory(path)
