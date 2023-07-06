@@ -29,11 +29,7 @@ def create_directory(path):
     # Crea una cartella nel percorso specificato.
     try:
         os.makedirs(path, exist_ok=True)
-<<<<<<< HEAD
-        print(f'Directory "{path}" created successfully.')
-=======
         print(f'Cartella "{path}" creata con successo.')
->>>>>>> d40a689 (fixed bugs)
     except Exception as e:
         print(error(f'Errore durante la creazione della cartella "{path}": {str(e)}'))
 
@@ -41,13 +37,8 @@ def create_directory(path):
 def parse_arguments():
     # Analizza gli argomenti della riga di comando.
     parser = argparse.ArgumentParser(
-<<<<<<< HEAD
-        description='Create files or directories.')
-    parser.add_argument('paths', nargs='+', help='Paths of the files or directories to create')
-=======
         description='Crea file o cartelle.')
     parser.add_argument('paths', help='Percorsi dei file o delle cartelle da creare')
->>>>>>> d40a689 (fixed bugs)
     parser.add_argument('--start-folder', '-s',
                         help='Percorso della cartella di partenza (opzionale)')
     return parser.parse_args()
@@ -56,11 +47,7 @@ def parse_arguments():
 def main():
     # Funzione principale per gestire la creazione di file o cartelle.
     args = parse_arguments()
-<<<<<<< HEAD
-    paths = args.paths
-=======
     paths = args.paths.split(',')
->>>>>>> d40a689 (fixed bugs)
     start_folder = args.start_folder
 
     if start_folder:
@@ -73,12 +60,6 @@ def main():
                 return
 
     for path in paths:
-<<<<<<< HEAD
-        base_dir = os.path.dirname(path)
-        if base_dir:
-            os.makedirs(base_dir, exist_ok=True)
-        if os.path.isfile(path):
-=======
         if '/' in path:
             segments = path.split('/')
             for segment in segments[:-1]:
@@ -86,10 +67,7 @@ def main():
                 os.chdir(segment)
             create_file(segments[-1])
         else:
->>>>>>> d40a689 (fixed bugs)
             create_file(path)
-        else:
-            create_directory(path)
 
 
 if __name__ == '__main__':
