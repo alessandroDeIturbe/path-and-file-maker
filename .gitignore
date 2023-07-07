@@ -1,3 +1,5 @@
 pfm/prove.py
 pfm/prova
 .vscode
+pfm.egg-info
+build
